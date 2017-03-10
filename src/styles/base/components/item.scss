@@ -1,0 +1,41 @@
+@import '../_shared';
+
+.item__box {
+  display: flex;
+  font-size: 0.8em;
+  padding: 0 20px;
+  height: 60px;
+  align-items: center;
+  cursor: pointer;
+
+  &:hover {
+    background-color: rgb(230, 230, 230);
+
+    .item__actions-box {
+      display: inline-block;
+    }
+
+    .item__info {
+      display: none;
+    }
+  }
+
+  .item__actions-box {
+    display: none;
+    margin-left: auto;
+  }
+
+  .item__info {
+    display: inline-block;
+    margin-left: auto;
+  }
+
+  .item__caption {
+    color: $dark-font-color;
+  }
+
+  &.item__completed .item__caption {
+    color: $light-grey-font-color;
+    text-decoration: line-through;
+  }
+}

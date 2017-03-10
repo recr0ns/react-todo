@@ -1,0 +1,20 @@
+@import './_shared';
+
+.todo__app {
+
+  .todo__content {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+
+    .todo__dir-tree {
+      flex: 1;
+    }
+
+    .todo__items-list {
+      flex: 3;
+      padding-left: 20px;
+    }
+  }
+}

@@ -1,0 +1,42 @@
+@import "../_shared";
+
+.btn-hidden {
+  height: 32px;
+  width: 32px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: $light-grey-font-color;
+  transition: all 0.2s;
+  margin-left: 5px;
+
+  &.btn-hidden-sm {
+    width: 24px;
+    height: 24px;
+    margin-left: 3px;
+
+    i {
+      font-size: 18px;
+    }
+  }
+
+  &.btn-hidden-inactive {
+    pointer-events: none;
+  }
+
+  &.btn-hidden-active,
+  &:hover {
+    background-color: $light-grey-font-color;
+    color: $white-font-color;
+  }
+
+  &.btn-hidden-theme-golden {
+    color: rgb(247, 219, 69);
+
+    &:hover {
+      color: rgb(247, 219, 69);
+    }
+  }
+}

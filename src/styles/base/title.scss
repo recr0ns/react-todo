@@ -1,0 +1,35 @@
+@import './shared';
+
+.title__box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+
+  .title__caption {
+    font-size: 1.25em;
+    letter-spacing: 2;
+    display: inline-block;
+    font-weight: 500;
+  }
+
+  .title__content {
+    margin-left: auto;
+    display: inline-block;
+  }
+}
+
+.title__bottom-content {
+  // border-top: $border;
+  border-radius: 0 0 3px 3px;
+  overflow: hidden;
+}
+
+.fade-enter {
+  right: 100px;
+}
+
+.fade-enter-active {
+  right: 0;
+  transition: .5s ease-in all;
+}

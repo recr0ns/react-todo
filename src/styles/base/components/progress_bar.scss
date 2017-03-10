@@ -1,0 +1,13 @@
+@import '../_shared';
+
+.progress-bar {
+  height: 8px;
+  background-color: $light-grey-font-color;
+
+  .progress-bar__inner {
+    background-color: $blue-background;
+    height: 8px;
+    margin-top: -1px;
+    transition: all 0.2s;
+  }
+}

@@ -1,0 +1,27 @@
+@import "../_shared";
+
+.btn-title {
+  display: inline-block;
+  font-size: 10px;
+  font-weight: 600;
+  text-transform: uppercase;
+  padding: 5px 10px;
+  cursor: pointer;
+  color: $light-grey-font-color;
+  border-radius: 2px;
+  transition: all 0.2s;
+
+  &:hover {
+    color: $white-font-color;
+    background-color: $light-grey-font-color;
+  }
+
+  &.btn-title-active {
+    color: $white-font-color;
+    background-color: $light-grey-font-color;
+
+    &:hover {
+      background-color: $grey-font-color;
+    }
+  }
+}

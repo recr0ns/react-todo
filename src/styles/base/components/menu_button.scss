@@ -1,0 +1,56 @@
+@import '../_shared';
+
+.btn-menu {
+  height: 48px;
+  display: flex;
+  align-items: center;
+  color: $white-font-color;
+  background-color: $light-grey-font-color;
+  border-radius: 2px;
+  border-bottom: 3px solid $grey-font-color;
+  cursor: pointer;
+  margin-right: 10px;
+  padding: 0 15px 0 15px;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 12px;
+  transition: all 0.2s;
+
+  &:hover {
+    background-color: rgb(168, 168, 168);
+  }
+
+  .btn-menu__icon {
+    display: inline-block;
+    height: 18px;
+    margin-right: 8px;
+
+    i {
+      font-size: 18px;
+    }
+  }
+
+  &.btn-menu__theme-green {
+    background-color: $green-background;
+    border-color: $dark-green-background;
+    &:hover {
+      background-color: $green-hover-background;
+    }
+  }
+
+  &.btn-menu__theme-red {
+    background-color: $red-background;
+    border-color: $dark-red-background;
+    &:hover {
+      background-color: $red-hover-background;
+    }
+  }
+
+  &.btn-menu__theme-blue {
+    background-color: $blue-background;
+    border-color: $dark-blue-background;
+    &:hover {
+      background-color: $blue-hover-background;
+    }
+  }
+}

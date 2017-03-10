@@ -1,0 +1,84 @@
+@import "../_shared";
+
+.dir__box {
+
+  display: flex;
+  cursor: pointer;
+  height: 48px;
+  background-color: inherit;
+  font-weight: 600;
+  text-transform: uppercase;
+  padding-left: 4px;
+  align-items: center;
+  color: $grey-font-color;
+
+  &:hover {
+    background-color: $hover-background;
+
+    .dir__actions {
+      display: flex;
+    }
+
+    .dir__info {
+      display: none;
+    }
+  }
+
+  &.active {
+    padding-left: 0;
+    border-left: solid 4px $blue-background;
+    background-color: $hover-background;
+  }
+
+  .dir__name {
+    font-size: 0.6em;
+    margin-left: 8px;
+
+    .dir__name-with-icon {
+      display: flex;
+      align-items: center;
+
+      .dir__name-icon {
+        height: 30px;
+        width: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        i {
+          font-size: 18px;
+        }
+      }
+      .dir__name-text {
+
+      }
+    }
+  }
+
+  .dir__actions {
+    display: none;
+    margin-left: auto;
+    padding-right: 20px;
+  }
+
+  .dir__info {
+    display: inline-block;
+    margin-left: auto;
+    padding-right: 20px;
+    font-weight: normal;
+    font-size: 0.7em;
+    color: $light-grey-font-color;
+  }
+
+  .dir__toggle-icon {
+    height: 24px;
+    width: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    i {
+      font-size: 0.9em;
+    }
+  }
+}

@@ -1,0 +1,48 @@
+@import "../_shared";
+
+button {
+  background-color: inherit;
+  outline: none;
+  border: none;
+}
+
+$shadow: 1px 1px 5px 1px rgba(22, 22, 22, 0.3);
+$up-shadow: 1px 1px 6px 1px rgba(22, 22, 22, 0.5);
+
+.round-btn {
+  $button-radius: 20px;
+  background-color: $grey-font-color;
+  height: $button-radius*2;
+  width: $button-radius*2;
+  border-radius: 50%;
+  color: $white-font-color;
+  box-shadow: $shadow;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-size: 24px;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+
+  i {
+    margin: auto;
+  }
+
+  &:hover {
+    box-shadow: $up-shadow;
+  }
+
+  &.btn-green {
+    background-color: rgb(52, 157, 17);
+    &:hover {
+      background-color: rgb(55, 173, 16);
+    }
+  }
+
+  &.btn-red {
+    background-color: rgb(205, 55, 55);
+    &:hover {
+      background-color: rgb(218, 57, 57);
+    }
+  }
+}

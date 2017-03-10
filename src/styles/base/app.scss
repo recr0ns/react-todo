@@ -1,0 +1,36 @@
+@import './_shared';
+
+body {
+  margin: 0;
+  padding: 0;
+  padding-bottom: 120px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 20px;
+  background: rgb(214, 214, 214) url("/img/bg.png") no-repeat fixed center;
+  background-size: cover;
+  color: $dark-font-color;
+}
+
+p {
+  margin: 0;
+}
+
+.App {
+  text-align: center;
+}
+
+.outer {
+  padding-top: 50px;
+}
+
+.container {
+  margin: auto;
+  width: 1024px;
+}
+
+.box {
+  background-color: $white-background;
+  box-shadow: $panel-shadow;
+  border-radius: 3px;
+  // overflow: hidden;
+}
