@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import RoundButton from '../round_button';
 import TitleButton from '../title_button';
 import FontAwesome from 'react-fontawesome';
+import FloatingActionButton from 'material-ui/FloatingActionButton';
+import ContentAdd from 'material-ui/svg-icons/content/add';
 
 export default class List extends Component {
   renderItems() {
@@ -29,9 +31,9 @@ export default class List extends Component {
   renderAddButton() {
     if (this.props.showActions) {
       return (
-        <RoundButton className="btn-green list__add-btn" onClick={this.props.onAddClick}>
-          <i className="material-icons">add</i>
-        </RoundButton>
+        <FloatingActionButton mini={true} className={"list__add-btn"} onClick={this.props.onAddClick}>
+          <ContentAdd />
+        </FloatingActionButton>
       )
     }
     return null;

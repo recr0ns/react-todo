@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import RoundButton from '../round_button';
+import FloatingActionButton from 'material-ui/FloatingActionButton';
+import ContentAdd from 'material-ui/svg-icons/content/add';
 
 export default class Tree extends Component {
   renderDirectories() {
@@ -19,9 +21,9 @@ export default class Tree extends Component {
       <div className="box tree__box">
         <div className="tree__title">
           <span>directories</span>
-          <RoundButton className="btn-green btn-sm tree__add-btn" onClick={this.props.onAddClick}>
-            <i className="material-icons">add</i>
-          </RoundButton>
+          <FloatingActionButton mini={true} className={"tree__add-btn"} style={{display: 'flex'}} onClick={this.props.onAddClick}>
+            <ContentAdd />
+          </FloatingActionButton>
         </div>
         <div className="tree__items">
           {this.renderDirectories()}

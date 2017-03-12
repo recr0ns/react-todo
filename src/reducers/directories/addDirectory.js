@@ -6,7 +6,6 @@ function nextId() {
 }
 
 export default function(state) {
-  console.log('add dir!');
   const id = nextId();
   const dir = new Map({
     id,

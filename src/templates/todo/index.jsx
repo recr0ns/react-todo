@@ -8,6 +8,7 @@ import TreeContainer from '../../containers/tree';
 import {DirectoryContainer, DirectoryWithIconContainer} from '../../containers/directory';
 import ProgressBar from '../../containers/progress_bar';
 import ViewItem from '../../containers/view_item';
+import EditView from '../../containers/edit_item';
 import WindowContainer from '../../containers/window';
 
 export default class Todo extends Component {
@@ -49,6 +50,7 @@ export default class Todo extends Component {
             <WindowContainer
               list={<ListContainer renderItem={this.renderItem}/>}
               view_item={<ViewItem />}
+              edit_item={<EditView />}
               />
           </div>
         </div>

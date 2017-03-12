@@ -12,7 +12,11 @@
     background-color: rgb(230, 230, 230);
 
     .item__actions-box {
-      display: inline-block;
+      display: flex;
+    }
+
+    .item__checkbox .item__checkbox-btn {
+      display: flex;
     }
 
     .item__info {
@@ -30,12 +34,44 @@
     margin-left: auto;
   }
 
+  .item__checkbox {
+    height: 40px;
+    width: 40px;
+    margin-right: 8px;
+    position: relative;
+
+    .item__checkbox-btn {
+      height: 100%;
+      width: 100%;
+      display: none;
+      justify-content: center;
+      align-items: center;
+      color: $light-grey-font-color;
+      border-radius: 50%;
+
+      &:hover {
+        background-color: $hover-background;
+      }
+
+      i {
+        font-size: 18px;
+      }
+    }
+  }
+
   .item__caption {
     color: $dark-font-color;
   }
 
-  &.item__completed .item__caption {
-    color: $light-grey-font-color;
-    text-decoration: line-through;
+  &.item__completed {
+    .item__caption {
+      color: $light-grey-font-color;
+      text-decoration: line-through;
+    }
+
+    .item__checkbox .item__checkbox-btn {
+      display: flex;
+      color: $green-background;
+    }
   }
 }

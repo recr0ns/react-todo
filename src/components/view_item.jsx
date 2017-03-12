@@ -19,7 +19,6 @@ const renderActions = (props) => {
 }
 
 const ViewItem = (props) => {
-  console.log('view ', props);
   return (
     <div className="box list__box">
       <div className="list__head">

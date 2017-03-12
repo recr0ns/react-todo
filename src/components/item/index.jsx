@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import HiddenButton from '../hidden_button';
 import classnames from 'classnames';
+import Icon from '../icon';
 
 export default class Item extends Component {
   renderInfo() {
@@ -24,10 +25,18 @@ export default class Item extends Component {
 
     return (
       <div className={itemClasses} onClick={this.props.onClick}>
+        <div className="item__checkbox">
+          <div className="item__checkbox-btn" onClick={(e) => {this.props.onToggleClick(this.props.id); e.stopPropagation(); }}>
+            <Icon name="check" />
+          </div>
+        </div>
         <span className="item__caption">{this.props.title}</span>
         <div className="item__actions-box">
+          <HiddenButton onClick={(e) => {this.props.onDeleteClick(this.props.id); e.stopPropagation()}}>
+            <Icon name="delete" />
+          </HiddenButton>
           <HiddenButton theme={this.props.starred ? 'golden' : false} onClick={(e) => {this.props.onStarClick(this.props.id); e.stopPropagation()}}>
-            <i className="material-icons">star</i>
+            <Icon name="star" />
           </HiddenButton>
         </div>
         {this.renderInfo()}

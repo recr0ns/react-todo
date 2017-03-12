@@ -1,5 +1,5 @@
 import {connect} from 'react-redux';
-import { addTodo, showCompletedTodo } from '../actions';
+import { newTodo, showCompletedTodo } from '../actions';
 import List from '../components/list';
 
 const getSelectedDirectory = (state) => {
@@ -66,7 +66,7 @@ function mapStateToProps(state) {
 
 function mapDispatchToProps(dispatch) {
   return {
-    onAddClick: () => { dispatch(addTodo()); },
+    onAddClick: () => { dispatch(newTodo()); },
     onShowCompletedClick: () => { dispatch(showCompletedTodo()); },
   };
 }

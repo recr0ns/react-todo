@@ -9,7 +9,7 @@ function mapStateToProps(state, ownProps) {
 function mapDispatchToProps(dispatch, ownProps) {
   return {
     onClick: () => { dispatch(selectAndDisplayTodo(ownProps.id)); },
-    onCompleteClick: () => { dispatch(toggleTodo(ownProps.id)); },
+    onToggleClick: () => { dispatch(toggleTodo(ownProps.id)); },
     onStarClick: () => { dispatch(starTodo(ownProps.id)); }
   };
 }
